@@ -1,11 +1,12 @@
 const { resolve } = require('path');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-module.export = {
-  entry: './src/index.tsx',
+module.exports = {
+  entry: resolve(__dirname, '..', 'src', 'index.js'),
   output: {
     filename: '[name]-[hash:6].js',
-    path: resolve(__dirname, 'dist'),
+    path: resolve(__dirname, '..', 'dist'),
     publicPath: '/'
   },
   resolve: {
@@ -14,6 +15,10 @@ module.export = {
   plugins: [
     new CleanWebpackPlugin({
       verbose: true,
+    }),
+    new HtmlWebpackPlugin({
+      template: resolve(__dirname, '..', 'public', 'index.html'),
+      filename: 'index.html'
     })
   ]
 }
