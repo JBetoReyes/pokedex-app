@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 const { resolve } = require('path');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -7,7 +8,7 @@ module.exports = {
   output: {
     filename: '[name]-[hash:6].js',
     path: resolve(__dirname, '..', 'dist'),
-    publicPath: '/'
+    publicPath: '/',
   },
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.jsx'],
@@ -18,7 +19,7 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       template: resolve(__dirname, '..', 'public', 'index.html'),
-      filename: 'index.html'
-    })
-  ]
-}
+      filename: 'index.html',
+    }),
+  ],
+};
