@@ -1,4 +1,4 @@
-import { IPokemonListResult } from "./Home.common";
+import { IPokemonListResult } from './Home.common';
 
 const fetchData = async (): Promise<IPokemonListResult> => {
   const pokemonApi: string = process.env.POKEMON_API as string;
