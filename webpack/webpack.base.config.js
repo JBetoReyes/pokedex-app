@@ -35,9 +35,6 @@ module.exports = (env) => {
         template: resolve(__dirname, '..', 'public', 'index.html'),
         filename: 'index.html',
       }),
-      new webpack.DllReferencePlugin({
-        manifest: resolve(__dirname, '..', 'dist', 'modules-manifest.json'),
-      }),
       new AddAssetHtmlPlugin({
         filepath: resolve(__dirname, '..', 'dist', '*.dll.js'),
       }),
@@ -53,6 +50,17 @@ module.exports = (env) => {
           use: {
             loader: 'awesome-typescript-loader',
           },
+        },
+        {
+          test: /\.(png|jpe?g|gif)$/i,
+          use: [
+            {
+              loader: 'file-loader',
+              options: {
+                name: 'assets/[hash].[ext]',
+              },
+            },
+          ],
         },
       ],
     },
