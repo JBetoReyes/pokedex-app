@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { IPokemon } from './Home.common';
-import './Home.scss';
+import '../../public/assets/styles/pages/_home.scss';
 import fetchData from './Home.service';
 import generatePokemonList from './Home.controller';
 
