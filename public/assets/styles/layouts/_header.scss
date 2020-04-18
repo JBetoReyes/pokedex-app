@@ -1,5 +1,59 @@
-header.header {
-  img {
-    width: 50px;
+@import '../abstracts/variables';
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__img {
+    margin: 5px 0 0 5px;
+    width: 60px;
+    height: 60px;
+  }
+
+  &__menu {
+    &--profile {
+      display: flex;
+      margin: 5px 30px 0 0;
+      align-items: center;
+
+      img {
+        margin-right: 5px;
+        height: 50px;
+        width: 50px;
+      }
+
+      p {
+        color: $primary-color;
+        margin: 0;
+      }
+    }
+
+    &:hover {
+      ul,
+      ul:hover {
+        display: block;
+        position: absolute;
+      }
+    }
+
+    ul {
+      margin: 0;
+      padding: 0;
+      text-align: right;
+      display: none;
+      li {
+        list-style-type: none;
+        margin: 10px 0;
+        a {
+          text-decoration: none;
+          color: $primary-color;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
   }
 }

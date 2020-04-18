@@ -28,6 +28,9 @@ module.exports = (env) => {
     },
     resolve: {
       extensions: ['.ts', '.tsx', '.js', '.jsx'],
+      alias: {
+        Assets: resolve(__dirname, '..', 'public', 'assets/'),
+      },
     },
     plugins: [
       new webpack.DefinePlugin(envKeys),
