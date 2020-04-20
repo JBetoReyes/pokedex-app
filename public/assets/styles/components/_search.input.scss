@@ -1,0 +1,17 @@
+@import '../abstracts/variables';
+
+.search.input_container {
+  position: relative;
+  text-align: center;
+  input {
+    border: 2px solid white;
+    color: gray;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 35px;
+    width: 70%;
+    height: 50px;
+    outline: none;
+    font-size: 1rem;
+    padding: 0 0 0 20px;
+  }
+}

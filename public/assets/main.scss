@@ -1,6 +1,8 @@
 @import './styles/base/typography';
+@import './styles/abstracts/variables';
 
 * {
   box-sizing: border-box;
   font-family: 'Muli', sans-serif;
+  color: $primary_color;
 }
