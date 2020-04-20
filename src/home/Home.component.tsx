@@ -18,7 +18,7 @@ const Home = () => {
     <>
       <section className="search__section">
         <h2>Looking for a pokemon?</h2>
-        <SearchInput />
+        <SearchInput placeHolder="Enter your pokemon..." />
       </section>
       <h1>Pokemon List</h1>
       <ol>{generatePokemonList(pokemons)}</ol>
