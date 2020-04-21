@@ -1,10 +1,10 @@
 @import '../abstracts/variables';
 
 .search.input_container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
   input {
     border: 2px solid white;
     color: gray;
@@ -17,7 +17,7 @@
     height: 50px;
 
     &::placeholder {
-        color: gray;
+      color: gray;
     }
   }
 }

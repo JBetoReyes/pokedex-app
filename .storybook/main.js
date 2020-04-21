@@ -1,9 +1,12 @@
 const { resolve } = require('path');
 
 module.exports = {
-  stories: ['../stories/**/*.stories.tsx', '../src/common/components/**/*.stories.tsx'],
+  stories: [
+    '../stories/**/*.stories.tsx',
+    '../src/common/components/**/*.stories.tsx',
+  ],
   addons: ['@storybook/addon-actions', '@storybook/addon-links'],
-  webpackFinal: async config => {
+  webpackFinal: async (config) => {
     config.module.rules.push(
       {
         test: /\.(ts|tsx)$/,
@@ -23,8 +26,8 @@ module.exports = {
     );
     config.resolve.extensions.push('.ts', '.tsx');
     config.resolve.alias = {
-        Assets: resolve(__dirname, '..', 'public', 'assets/'),
-    }
+      Assets: resolve(__dirname, '..', 'public', 'assets/'),
+    };
     return config;
   },
 };

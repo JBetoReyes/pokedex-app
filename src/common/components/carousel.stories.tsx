@@ -1,9 +1,9 @@
 import React, { ReactNode } from 'react';
-import SearchInput from './search.input.component';
+import CarouselItem from './carousel.component';
 
 export default {
-  title: 'Search Input',
-  component: SearchInput,
+  title: 'Carousel Item',
+  component: CarouselItem,
   decorators: [
     (storyFn: () => ReactNode) => (
       <div
@@ -21,7 +21,4 @@ export default {
   ],
 };
 
-export const Default = () => <SearchInput />;
-export const WithPlaceHolder = () => (
-  <SearchInput placeHolder="A placeholder" />
-);
+export const Default = () => <CarouselItem />;
